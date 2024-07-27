@@ -1,0 +1,28 @@
+*, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #FAF9F6;
+}
+
+.mandatory {
+  color: red;
+  font-weight: bold;
+  font-size: 30px !important;
+  /* align-self: center; */
+  margin-left: 10px;
+}
+
+/* OVERRIDING MATERIAL UI CLASSES */
+
+.MuiPaper-root {
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+.MuiTypography-root {
+  display: block;
+}

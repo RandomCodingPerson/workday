@@ -1,0 +1,49 @@
+.awaitingAction {
+    h3 {
+        padding-bottom: 0vw;
+        margin-bottom: 0;
+    }
+    .locationIconWrapper {
+        background:var(--blueberry);
+        padding: 1vw;
+        width: 24px;
+        height: 24px;
+        border-radius: 100vw;
+        box-sizing: content-box;
+    }
+    .actionItem {
+        display:flex;
+        justify-content: flex-start;
+        margin-top: 2vw;
+        .actionText {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 2vw;
+            .actionName {
+                font-weight: 600;
+            }
+        }
+    }
+    .hr {
+        width: 100%;
+        border: 1px solid var(--light);
+        height: 0;
+        margin: 2vh 0;
+        margin-top: calc(2vh + 1vw);
+    }
+    a {
+        color: var(--blueberry);
+        font-weight: 600;
+        transition: .5s ease;
+        margin-right: 1vw;
+        display:flex;
+        align-items: center;
+        .t {
+            margin-left: .5vw;
+        }
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
