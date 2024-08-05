@@ -1,0 +1,23 @@
+.qt {
+    padding-bottom: 2vw !important;
+    .hr {
+        width: 100%;
+        border: 1px solid var(--light);
+        height: 0;
+        margin: 2vh 0;
+    }
+    a {
+        color: var(--blueberry);
+        font-weight: 600;
+        transition: .5s ease;
+        margin-right: 1vw;
+        display:flex;
+        align-items: center;
+        .t {
+            margin-left: .5vw;
+        }
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}

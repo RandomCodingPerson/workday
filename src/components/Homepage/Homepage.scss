@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import '@workday/canvas-tokens-web/css/base/_variables.css';
+@import '@workday/canvas-tokens-web/css/system/_variables.css';
+@import '@workday/canvas-tokens-web/css/brand/_variables.css';
+
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --blueberry: #505ADF;
+    --dark: #19191D;
+    --light: #CFCFCF;
+}
+
+.homepage-box-container {
+    width: 1000px;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+#homepage-background {
+    position: absolute;
+    background-image: url('../../img/homepageBackground.jpg');
+    width: 100%;
+    background-size: cover;
+    height: 300px;
+    z-index: -1;
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+}
+
+body {
+    background: #ECEEEF !important;
+}
+
+.homepage-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: flex-start;
+    /* color: #000; */
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bodyWrapper {
+    background: #ECEEEF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: #19191D;
+    width: 85vw;
+    //width: 100vw;
+    margin-left: 7.5vw;
+    h3 {
+        margin-bottom: 2vw;
+        font-weight: 500;
+    }   
+
+    .left {
+        //width: 61.5vw;
+        width: 50vw;
+        h1 {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            height: 34px;
+            size: border-box;
+        }
+    }
+    
+    .right {
+        //width: 31.3vw;
+        width: 28.605vw;
+        .date {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            height: 34px;
+            box-sizing: border-box;
+            align-items: flex-end;
+            display: flex;
+            font-size: 17px;
+            color: #707273;
+        }
+    }
+    
+    .box {
+        margin-bottom: 3vw;
+        background: white;
+        padding: 2vw;
+        border-radius: 1vw;
+        display: block;
+        box-shadow: -1px 4px 5px #D7D7D7, 1px 4px 5px #D7D7D7;
+        .button-text {
+            padding: .75em 2.5em;
+            background: transparent;
+            color:var(--dark);
+            border: var(--dark) 1.5px solid;
+            border-radius: 1000vw;
+            margin: 0;
+            font-weight: 500;
+            margin-bottom: 1vw;
+        }
+    }
+
+}
