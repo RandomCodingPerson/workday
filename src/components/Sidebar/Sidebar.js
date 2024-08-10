@@ -69,7 +69,7 @@ const Sidebar = () => {
                             style={{marginLeft:"0px", height: "21px"}}
                         />
                     </NavIcon>
-                <p1>MENU</p1>
+                <p1 style={{fontSize: ".8rem", letterSpacing: ".1rem"}}>MENU</p1>
                 </Nav>
                 <SidebarNav sidebar={sidebar} style={{width: "27.6vw"}}>
                     <SidebarWrap>
