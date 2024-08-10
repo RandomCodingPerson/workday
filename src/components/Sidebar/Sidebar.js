@@ -11,7 +11,7 @@ import SubMenu from "./SubMenu";
 import {SystemIcon} from '@workday/canvas-kit-react/icon';
 import {plusCircleIcon, textEditIcon} from '@workday/canvas-system-icons-web';
 import { IconContext } from "react-icons/lib";
-import './Sidebar.css'
+import './Sidebar.scss'
 
 
 const Nav = styled.div`

@@ -1,0 +1,105 @@
+.white-bg {
+    height: calc(100vh - 64px);
+    width: 100%;
+    background-color: white !important;
+}
+.page-title-container {
+    height: 8.25vh;
+    line-height: 8.25vh;
+    padding: 0px 30px;
+    background-color: #2e52ca !important;
+    margin-bottom: 2.61vh;
+}
+h2 {
+    font-size: 25px !important;
+}
+.container {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 30vw;
+    height: 69.74vh;
+    border-width: 0 4px 0 0;
+    margin-top: 2.09vh;
+    border-style: solid;
+    border-color: #f0f2f3;
+}
+.between-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.color-test {
+    color: #2734a9;
+}
+.time-info {
+    color: gray;
+    margin-top: 4.2vh;
+    display: flex;
+    flex-direction: row;
+    min-height: 4.17vh;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.option {
+    border-radius: 100vw;
+    width: 7.2vw;
+    min-height: 4.93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-color: #D9D8DB;
+    border-style: solid;
+    align-self: center;
+    margin-bottom: 1px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.vflex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.rectangle {
+    background:#3068c5;
+    height: 4px;
+    width: 12.89vw;
+    margin-top: 2.26vh;
+}
+.filter-box {
+    border-color: #EEEEF2;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 11.86vw;
+}
+.chevron-center {
+    margin-top: 2%;
+}
+.filter-text {
+    padding: 5px 0 5px 15px;
+}
+.ececee {
+    background-color: #ececee;
+}
+.yellow {
+    background-color: #F29221;
+    color: whitesmoke;
+}

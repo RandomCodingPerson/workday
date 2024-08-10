@@ -36,6 +36,9 @@ import Benefitspage from './components/Benefitspage/Benefitspage'
 import ChangeBenefits from './components/Benefitspage/components/ChangeBenefits/ChangeBenefits'
 import BenefitElections from './components/Benefitspage/components/BenefitElections/BenefitElections'
 
+import Inbox from './components/Inbox/Inbox'
+
+
 import './App.css';
 import CreatePosition from './components/CreatePosition/createPosition';
 
@@ -167,6 +170,8 @@ const App = () => {
           ---- END OF ROUTES ----
           
           */}
+          <Route exact path="/inbox" component={Inbox} />
+
         </Switch>
         </Context.Provider>
         {/* <Footer /> */}
