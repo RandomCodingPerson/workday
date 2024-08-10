@@ -3,17 +3,20 @@ import React from 'react';
 import PageTitle from '../global/PageTitle/PageTitle'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import {SystemIcon} from '@workday/canvas-kit-react/icon';
-import {starIcon, pdfIcon, gearIcon, excelIcon, fullscreenIcon, relatedActionsIcon, filterIcon, showColIcon, worksheetsIcon, cColumnClusteredIcon, chevronDownIcon, chevronDownSmallIcon} from '@workday/canvas-system-icons-web';
-
+import {starIcon, pdfIcon, gearIcon, excelIcon, fullscreenIcon, relatedActionsIcon, filterIcon, showColIcon, worksheetsIcon, cColumnClusteredIcon, chevronDownIcon, chevronDownSmallIcon, inboxLargeIcon} from '@workday/canvas-system-icons-web';
+import { useState } from 'react';
+import SuccessPopup from './Components/SuccessPopup/SuccessPopup'
 import './Inbox.scss'
-
+import inboxSpecial from "../../img/inboxSpecial.png"
 import Days from "./Components/Days/Days";
 
 
 const Inbox = (props) => {
+    const [isComplete, setIsComplete] = useState(false);
     const history = useHistory()
     return (
         <div class="white-bg">
+            <SuccessPopup isOpen={isComplete}/>
             <PageTitle id="title" title="Inbox"/>
             <div class="container">
                 <div class="sidebar">
@@ -48,7 +51,7 @@ const Inbox = (props) => {
                         <SystemIcon size={20} icon={starIcon} style={{marginRight: "1vw"}}/>
                     </div>
                 </div>
-                <div style={{marginLeft: "4.35vw"}}>
+                {!isComplete ? <div style={{marginLeft: "4.35vw"}}>
                     <div class="between-row" style={{marginTop: "1.22vh", marginBottom: "2.5vh", width: "62.9vw"}}>
                         <p style={{fontSize: "20px"}}><strong>Time Entry Approval</strong></p>
                         <div class="between-row" style={{width: "16.54vw"}}>
@@ -91,14 +94,16 @@ const Inbox = (props) => {
                         </div>
                         <Days/>
                         <div class="between-row" style={{marginTop: "5.5vh", width: "40.86vw"}}>
-                            <div class="option yellow" onClick={() => history.push('/')}><strong>Approve</strong></div>
+                            <div class="option yellow" onClick={() => setIsComplete(true)}><strong>Approve</strong></div>
                             <div class="option ececee" onClick={() => history.push('/')}><strong>Send Back</strong></div>
                             <div class="option ececee" onClick={() => history.push('/')}><strong>Deny</strong></div>
                             <div class="option ececee" onClick={() => history.push('/')}><strong>Close</strong></div>
 
                         </div>
                     </div>
-                </div>
+                </div> : <div style={{display: "flex", width: "100%", justifyContent: "space-around", alignItems: "center"}}>
+                    <img src={inboxSpecial} style={{width: "11.32vw", height: "auto"}}></img>
+                    </div>}
             </div>
         </div>
     )
