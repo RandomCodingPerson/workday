@@ -1,0 +1,19 @@
+.MuiTableCell-root {
+    border-style: solid !important;
+    border-width: 1px !important;
+    margin: 0px !important;
+    padding: 6px !important;
+    font-size: 12px !important;
+    border-color: gray !important;
+    line-height: 100% !important;
+    padding-left: 0.69vw !important;
+    
+}
+.MuiTableCell-root.MuiTableCell-head {
+    padding-top: 2.26vh !important;
+    padding-bottom: 2.26vh !important;
+}
+.MuiTableCell-root.MuiTableCell-alignRight {
+    padding-left: 6px !important;
+    padding-right: 0.69vw !important;
+}

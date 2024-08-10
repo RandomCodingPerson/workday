@@ -1,0 +1,12 @@
+.MuiInputBase-input {
+    font-size: 15px;
+    width: 30vw;
+}
+
+#searchInput {
+    font-size: 15px;
+    width: 30vw;
+}
+#results {
+    margin-left: 18.6vw; 
+}

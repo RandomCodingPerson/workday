@@ -17,7 +17,7 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import Switch from '@material-ui/core/Switch'
 import FormLabel from '@material-ui/core/FormLabel';
 import {SystemIcon} from '@workday/canvas-kit-react/icon';
-import {homeIcon, userIcon, contactCardMatrixManagerIcon, starIcon, chevronRightIcon, assistantIcon, notificationsIcon, inboxLargeIcon, searchIcon, folderCloseIcon, cloudLockIcon, avatarIcon, questionIcon, extLinkIcon} from '@workday/canvas-system-icons-web';
+import {homeIcon, userIcon, contactCardMatrixManagerIcon, starIcon, chevronRightIcon, assistantIcon, notificationsIcon, inboxLargeIcon, folderCloseIcon, cloudLockIcon, avatarIcon, questionIcon, extLinkIcon} from '@workday/canvas-system-icons-web';
 import {AppletIcon} from '@workday/canvas-kit-react/icon';
 import {benefitsIcon, cloudShieldIcon, extendIcon} from '@workday/canvas-applet-icons-web';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
@@ -28,7 +28,9 @@ import media from '../../img/media.svg'
 import user from '../../img/user.svg'
 import logoImg from '../../img/newLogo.png'
 import Sidebar from "../Sidebar/Sidebar";
-import './Navbar.css'
+import Searchbar from "../Searchbar/Searchbar";
+
+import './Navbar.scss'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -45,47 +47,6 @@ const useStyles = makeStyles((theme) => ({
     },
     cursor: "pointer",
     color: theme.palette.primary.main
-  },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-    focus: {
-      borderColor: "blue !important"
-    }
-
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputRoot: {
-    color: 'inherit',
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
   },
   sectionDesktop: {
     display: 'none',
@@ -307,21 +268,7 @@ const Navbar = (props) => {
             style={{width: "55px", height: "30px"}}
           />
           </Typography>
-          <div className={classes.search}  style={{display: "flex", marginLeft: "18.6vw", width: "36.8vw", height: "6vh", backgroundColor: "#f0f1f5", borderRadius: "100vw", borderColor: "#ebebeb", borderStyle: "solid", borderWidth: "2px"}}>
-            <div className={classes.searchIcon}>
-              <SystemIcon size={"3vh"} icon={searchIcon} />
-            </div>
-            <InputBase
-              placeholder="Search"
-              style={{color: "Black", fontSize: "15px"}}
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-
-            />
-          </div>
+          <Searchbar/>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="media" color="inherit">
@@ -333,10 +280,10 @@ const Navbar = (props) => {
               </Badge>
             </IconButton>
             <IconButton aria-label="show 1 new mails" color="inherit">
-              <Badge badgeContent={1} color="secondary">
+              <a onClick={() => history.push('/inbox')}><Badge badgeContent={1} color="secondary">
                 {/* <MailIcon /> */}
                 <SystemIcon icon={inboxLargeIcon} color='#4a5561'/>
-              </Badge>
+              </Badge></a>
             </IconButton>
             <IconButton
               aria-label="account of current user"
