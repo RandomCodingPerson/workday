@@ -1,0 +1,92 @@
+.createPositionFinishedModal {
+    padding: 2px;
+    border-radius: 10px;
+    max-width: 650px;
+    width: 60vw;
+    color: var(--graydark);
+    .iconWrapper {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        background:white;
+        .icon {
+            padding: 5px;
+            padding-bottom: 3px;
+            transition: .5s ease;
+            border: none;
+            background: var(--light2);
+            border: 1px solid white;
+            border-radius: 10px;
+            .xIcon {
+                left: 100%;
+            }
+        }
+    }  
+    .icon:hover {
+        border: 1px solid var(--blueberry);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .content {
+        padding: 0px 18px 18px 18px;
+        .hr {
+            width: 100%;
+            border: 1px solid var(--lighter);
+            height: 0;
+            margin: 3vh 0;
+        }
+        .supOrgWrapper {
+            align-items: center;
+            padding-bottom: 20px;
+            width: 85%;
+            p {
+                width: fit-content;
+                margin-top: 10px;
+            }
+            .a {
+                color: var(--blue);
+                margin-left: 2px;
+            }
+            .ast {
+                margin-left: 10px;
+                color: var(--red);
+                font-weight: 800;
+            }
+            .selectWrapper {
+                width:100%;
+                .select {
+                    margin-left: 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .buttons {
+        button {
+            border-radius: 100vw;
+            padding: 10px 30px;
+            transition: .5s ease;
+            height: fit-content;
+        }
+        .ok {
+            background: var(--blue);
+            color: white;
+            font-weight: 500;
+            border: 1px var(--blue) solid;
+        }
+        .ok:hover {
+            background: var(--darkblue);
+            border-color: var(--dakrblue);
+        }
+        .cancel {
+            background: white;
+            border: 1px var(--dark) solid;
+            margin-left: 15px;
+        }
+        .cancel:hover {
+            background: var(--dark);
+            color: white;
+        }
+    }
+}

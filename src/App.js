@@ -160,6 +160,7 @@ const App = () => {
           
           */}
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/?process=:process" component={Homepage} />
           <Route exact path="/createPosition" component={CreatePosition} />
 
           {/*

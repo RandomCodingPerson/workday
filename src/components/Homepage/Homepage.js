@@ -9,14 +9,32 @@ import TimelySuggestions from './components/timelySuggestions/timelySuggestions'
 import YourTeam from './components/yourTeam/yourTeam';
 import Schedule from './components/schedule/schedule';
 import CreatePositionModal from './components/createPositionModal/createPositionModal';
+import CreatePositionFinishedModal from './components/createPositionFinishedModal/createPositionFinishedModal';
 
 import { useState } from 'react';
 
+import { useLocation } from 'react-router-dom';
+
 const Homepage = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isCreateOpen, setIsCreateOpen] = useState(false);
+
+    const { search } = useLocation();
+    const parameters = new URLSearchParams(search);
+    const process = parameters.get('process');
+
+    var baseC = false;
+
+    if (process == "createPosition") {
+        baseC = true;
+    }
+
+    const [isCFinished, setIsCFinished] = useState(baseC);
+
+    
     return (
         <div>
-            <CreatePositionModal isOpen={isOpen} onChange={() => setIsOpen(false)}/>
+            <CreatePositionModal isOpen={isCreateOpen} onChange={() => setIsCreateOpen(false)}/>
+            <CreatePositionFinishedModal isOpen={isCFinished} onChange={() => setIsCFinished(false)}/>
             <img src="https://www.publicdomainpictures.net/pictures/220000/velka/scenic-mountain-landscape-1491664544hse.jpg" className='banner'/>
             <div className='bodyWrapper'>
                 <div className='left'>
@@ -28,7 +46,7 @@ const Homepage = (props) => {
                 <div className='right'>
                     <p className='date'>It's Sunday, July 27, 2024</p>
                     <Announcements/>
-                    <QuickTasks cpOnClick={() => setIsOpen(true)}/>
+                    <QuickTasks cpOnClick={() => setIsCreateOpen(true)}/>
                     <Schedule/>
                 </div>
             </div>
