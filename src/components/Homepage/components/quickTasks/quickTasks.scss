@@ -20,4 +20,19 @@
     a:hover {
         text-decoration: underline;
     }
+    .button-text {
+        padding: .75em 2.5em;
+        background: transparent;
+        color:var(--dark);
+        border: var(--dark) 1.5px solid;
+        border-radius: 1000vw;
+        margin: 0;
+        font-weight: 500;
+        margin-bottom: 1vw;
+        transition: 0.5s ease;
+    }
+    .button-text:hover {
+        background: var(--dark);
+        color: white;
+    }
 }

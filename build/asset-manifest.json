@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b52623fe.css",
+    "main.js": "/static/js/main.dd6d3756.js",
+    "static/js/453.d10d9744.chunk.js": "/static/js/453.d10d9744.chunk.js",
+    "static/media/homepageBackground.jpg": "/static/media/homepageBackground.c3571d979cb10cb7e83d.jpg",
+    "static/media/newLogo.png": "/static/media/newLogo.f29ac59f217feb9d49b8.png",
+    "static/media/book.svg": "/static/media/book.fbdfb69909ac295f0d07f286b5dd4eae.svg",
+    "static/media/workdayAssistant.svg": "/static/media/workdayAssistant.2b2b83bff681dff243c08077cd812c5f.svg",
+    "static/media/stand.svg": "/static/media/stand.7b943671e4692825447d59fd006fd194.svg",
+    "static/media/health.svg": "/static/media/health.c6823bf26a30bd71ca8f4e9318778661.svg",
+    "static/media/links.svg": "/static/media/links.d6683d04814f914e321461d421e7f85e.svg",
+    "static/media/group.svg": "/static/media/group.854bd8e4b11c2a7d4661cadf4d570982.svg",
+    "static/media/media.svg": "/static/media/media.823877d3c208e31e290b3ad58308a5d3.svg",
+    "static/media/laptop.svg": "/static/media/laptop.839c670d5da0391af211eb1137397b65.svg",
+    "static/media/navInbox.svg": "/static/media/navInbox.9a6c9f011f84e9b9335520ab05bc6625.svg",
+    "static/media/user.svg": "/static/media/user.b6949c6f1872d9398cfb8badb500ac1b.svg",
+    "index.html": "/index.html",
+    "main.b52623fe.css.map": "/static/css/main.b52623fe.css.map",
+    "main.dd6d3756.js.map": "/static/js/main.dd6d3756.js.map",
+    "453.d10d9744.chunk.js.map": "/static/js/453.d10d9744.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b52623fe.css",
+    "static/js/main.dd6d3756.js"
+  ]
+}

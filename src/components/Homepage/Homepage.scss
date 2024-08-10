@@ -11,7 +11,20 @@
 :root {
     --blueberry: #505ADF;
     --dark: #19191D;
+    --graydark: #363636;
     --light: #CFCFCF;
+    --lighter:rgb(230, 230, 230);
+        --lightest: e8ebed;
+
+    /* primary brand colors */
+    --blue: #0875e1;
+        /* blue subcolors */
+        --darkblue: #004387;
+        --bannerblue: #2443AD;
+    --red: #de2e21;
+    --orange: #ffa126;
+        /* orange subcolors */
+        --darkorange: #f38b00;
 }
 
 .homepage-box-container {
@@ -95,16 +108,6 @@ body {
         border-radius: 1vw;
         display: block;
         box-shadow: -1px 4px 5px #D7D7D7, 1px 4px 5px #D7D7D7;
-        .button-text {
-            padding: .75em 2.5em;
-            background: transparent;
-            color:var(--dark);
-            border: var(--dark) 1.5px solid;
-            border-radius: 1000vw;
-            margin: 0;
-            font-weight: 500;
-            margin-bottom: 1vw;
-        }
     }
 
 }

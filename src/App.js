@@ -37,6 +37,7 @@ import ChangeBenefits from './components/Benefitspage/components/ChangeBenefits/
 import BenefitElections from './components/Benefitspage/components/BenefitElections/BenefitElections'
 
 import './App.css';
+import CreatePosition from './components/CreatePosition/createPosition';
 
 export const Context =  createContext()
 
@@ -152,7 +153,20 @@ const App = () => {
           <Route exact path="/benefits" component={Benefitspage} />
           <Route exact path="/benefits/change-benefits" component={ChangeBenefits} />
           <Route exact path="/benefits/benefit-elections" component={BenefitElections} />
+          
+          { /* 
+          
+          ---- UPDATED VERSION ----
+          
+          */}
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/createPosition" component={CreatePosition} />
+
+          {/*
+
+          ---- END OF ROUTES ----
+          
+          */}
         </Switch>
         </Context.Provider>
         {/* <Footer /> */}
