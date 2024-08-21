@@ -17,6 +17,7 @@ import { useLocation } from 'react-router-dom';
 
 const Homepage = (props) => {
     const [isCreateOpen, setIsCreateOpen] = useState(false);
+    const [isCostCenter, setIsCostCenter] = useState(false);
 
     const { search } = useLocation();
     const parameters = new URLSearchParams(search);
