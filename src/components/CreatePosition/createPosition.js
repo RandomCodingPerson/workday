@@ -39,7 +39,7 @@ const CreatePosition = (props) => {
                 <ContentTableTwo/>
             </div>
             <div className='buttons'>
-                <a href='/?process=createPosition'><button className='ok'>Submit</button></a>
+                <a href='/?process=createPositionFin'><button className='ok'>Submit</button></a>
                 <a href='/'><button className='cancel'>Save for later</button></a>
                 <a href='/'><button className='cancel'>Cancel</button></a>
             </div>

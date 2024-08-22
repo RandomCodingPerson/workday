@@ -17,21 +17,25 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const Homepage = (props) => {
-    const [isCreateOpen, setIsCreateOpen] = useState(false);
     const { search } = useLocation();
     const parameters = new URLSearchParams(search);
     const process = parameters.get('process');
 
     var baseC = false;
     var costCenter = false;
-    if (process == "createPosition") {
+    var createPosition = false; 
+
+    if (process == "createPositionFin") {
         baseC = true;
     } else if (process == "createCostCenter") {
         costCenter = true;
+    } else if (process == "createPosition") {
+        createPosition = true;
     }
 
     const [isCFinished, setIsCFinished] = useState(baseC);
     const [isCostCenterOpen, setIsCostCenterOpen] = useState(costCenter);
+    const [isCreateOpen, setIsCreateOpen] = useState(createPosition);
 
     
     return (
