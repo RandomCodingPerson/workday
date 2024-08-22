@@ -7,8 +7,13 @@ export const SearchbarData = [
         type: "App"
     },
     {
+        title: "Enter and approve time off",
+        path: "/inbox",
+        type: "App"
+    },
+    {
         title: "Create Position",
-        path: "/",
+        path: "/?process=createPosition",
         type: "Task"
     },
     {
