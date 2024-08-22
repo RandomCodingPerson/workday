@@ -51,7 +51,7 @@ const VirtualCareerCenter = (props) => {
             <div className='bannerText'>
                 <h2>Virtual Career Center</h2> 
                 <div className='icons'>
-                    <img src={threeDots} height={20} style={{borderRadius: "10%"}}></img>
+                    <img src={threeDots} height={20} style={{borderRadius: ".2vw"}}></img>
                     <SystemIcon icon={pdfIcon} size={30} color="white"></SystemIcon>
                 </div>
             </div>
