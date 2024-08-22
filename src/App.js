@@ -38,9 +38,14 @@ import BenefitElections from './components/Benefitspage/components/BenefitElecti
 
 import Inbox from './components/Inbox/Inbox'
 
+import CreatePosition from './components/CreatePosition/createPosition';
+
+import CreateCostCenter from './components/CreateCostCenter/createCostCenter';
+
+import VirtualCareerCenter from './components/VirtualCareerCenter/virtualCareerCenter';
+
 
 import './App.css';
-import CreatePosition from './components/CreatePosition/createPosition';
 
 export const Context =  createContext()
 
@@ -165,13 +170,15 @@ const App = () => {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/?process=:process" component={Homepage} />
           <Route exact path="/createPosition" component={CreatePosition} />
+          <Route exact path="/createCostCenter" component={CreateCostCenter} />
+          <Route exact path="/virtualCareerCenter" component={VirtualCareerCenter} />
+          <Route exact path="/inbox" component={Inbox} />
 
           {/*
 
           ---- END OF ROUTES ----
           
           */}
-          <Route exact path="/inbox" component={Inbox} />
 
         </Switch>
         </Context.Provider>

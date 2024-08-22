@@ -1,0 +1,51 @@
+.MuiInputBase-input {
+    font-size: 15px;
+    width: 30vw;
+}
+
+#searchInput {
+    font-size: 15px;
+    width: 30vw;
+}
+#results {
+    margin-left: 18.6vw; 
+    width: 38.6vw;
+    max-height: 72.51vh;
+    border-radius: 1vw;
+    border-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0px;
+    background-color: white;
+}
+#searchBar {
+    margin-top: calc((64px - 6vh)/2);
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: calc(100%); 
+    overflow: hidden;
+    max-height: 62.77vh;   
+}
+.task {
+    padding-left: 1.97vw;
+    min-height: 8.38vh;
+    max-height: 8.38vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.task:hover {
+    background-color: whitesmoke;
+}
+.task-text {
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -27,8 +27,8 @@ import navInbox from '../../img/navInbox.svg'
 import media from '../../img/media.svg'
 import user from '../../img/user.svg'
 import logoImg from '../../img/newLogo.png'
-import Sidebar from "../Sidebar/Sidebar";
-import Searchbar from "../Searchbar/Searchbar";
+import Sidebar from "./components/sidebar/Sidebar";
+import Searchbar from "./components/searchbar/Searchbar";
 
 import './Navbar.scss'
 

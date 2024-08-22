@@ -18,23 +18,24 @@ import { useLocation } from 'react-router-dom';
 
 const Homepage = (props) => {
     const [isCreateOpen, setIsCreateOpen] = useState(false);
-    const [isCostCenterOpen, setIsCostCenterOpen] = useState(false);
-
     const { search } = useLocation();
     const parameters = new URLSearchParams(search);
     const process = parameters.get('process');
 
     var baseC = false;
-
+    var costCenter = false;
     if (process == "createPosition") {
         baseC = true;
+    } else if (process == "createCostCenter") {
+        costCenter = true;
     }
 
     const [isCFinished, setIsCFinished] = useState(baseC);
+    const [isCostCenterOpen, setIsCostCenterOpen] = useState(costCenter);
 
     
     return (
-        <div>
+        <div className='homepage'>
             <CreatePositionModal isOpen={isCreateOpen} onChange={() => setIsCreateOpen(false)}/>
             <CreateCostCenterModal isOpen={isCostCenterOpen} onChange={() => setIsCostCenterOpen(false)}/>
             <CreatePositionFinishedModal isOpen={isCFinished} onChange={() => setIsCFinished(false)}/>

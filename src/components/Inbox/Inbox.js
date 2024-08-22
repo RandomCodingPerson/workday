@@ -93,7 +93,7 @@ const Inbox = (props) => {
                             </div>
                         </div>
                         <Days/>
-                        <div class="between-row" style={{marginTop: "5.5vh", width: "40.86vw"}}>
+                        <div class="between-row" style={{marginTop: "5.5vh", width: "40.86vw", marginBottom: "5vh"}}>
                             <div class="option yellow" onClick={() => setIsComplete(true)}><strong>Approve</strong></div>
                             <div class="option ececee" onClick={() => history.push('/')}><strong>Send Back</strong></div>
                             <div class="option ececee" onClick={() => history.push('/')}><strong>Deny</strong></div>

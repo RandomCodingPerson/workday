@@ -1,0 +1,80 @@
+.contentTable {
+    table {
+        width: 100%;
+        table-layout: fixed;
+        .formItem {
+            display: flex;
+            margin-bottom: 20px;
+            .label {
+                font-weight: 500;
+                width: 15vw;
+            }
+            .req {
+                width: 40px;
+                text-align: right;
+                padding-right: 10px;
+                color: var(--red);
+                font-weight: 800;
+            }
+            .item {
+                width: calc(100% - 15vw - 40px);
+                .select {
+                    width: 25%;
+                }
+                .input {
+                    width: 25%;
+                    padding: 0 0.75em;
+                    line-height: 1.43;
+                    font-size: 0.875rem;
+                    min-height: 38px;
+                    color: var(--dark);
+                    letter-spacing: 0.01071em;
+                    border-radius: 4px;
+                    border: 1px hsl(0, 0%, 70%) solid;
+                }
+                input[type="checkbox"] {
+                    appearance: none;
+                    background-color: #fff;
+                    margin: 0;
+                    font: inherit;
+                    color: currentColor;
+                    width: 1.15em !important;
+                    min-height: 0;
+                    aspect-ratio: 1 / 1;
+                    border: 1px solid hsl(0, 0%, 70%);
+                    border-radius: 0.15em;
+                    transform: translateY(-0.075em);
+                    display: grid;
+                    place-content: center;
+                  }
+                  input[type="checkbox"]::before {
+                    content: "";
+                    width: 0.65em;
+                    height: 0.65em;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    box-shadow: inset 1em 1em var(--form-control-color);
+                  }
+                  input[type="checkbox"]:checked::before {
+                    transform: scale(1);
+                    background-color: var(--blue);
+                    transform-origin: bottom left;
+                    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+                  }
+            }
+            /*.css-1u9des2-indicatorSeparator:after {
+                position: absolute;
+                content: "";
+                top: 15%;
+                right: 2%;
+                width: 25px;
+                height: 25px;
+                background-image: url("../../../../img/wd-icon-list-view.svg");
+                background-color: white;
+              }
+            svg .css-tj5bde-Svg {
+                background-color: gray;
+            }*/
+        }
+    }
+}

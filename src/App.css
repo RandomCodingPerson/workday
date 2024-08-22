@@ -4,8 +4,8 @@
   margin: 0;
 }
 
-body {
-  background: #FAF9F6;
+body, html {
+  background: white;
 }
 
 .mandatory {

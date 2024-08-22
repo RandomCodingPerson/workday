@@ -38,7 +38,7 @@ const cccm = (props) => {
                 </div>
                 <div className='hr'/>
                 <div className='buttons'>
-                    <a href='/createPosition'><button className='ok'>OK</button></a>
+                    <a href='/createCostCenter'><button className='ok'>OK</button></a>
                     <button onClick={props.onChange} className='cancel'>Cancel</button>
                 </div>
             </div>
