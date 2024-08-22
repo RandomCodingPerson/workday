@@ -16,7 +16,7 @@ const qt = (props) => {
             <h3>Quick Tasks</h3>
             <div><button className="button-text">Enter and Approve Time Off</button></div>
             <div><button className="button-text" onClick={props.cpOnClick}>Create Position</button></div>
-            <div><button className="button-text">Time Off Balance</button></div>
+            <div><button className="button-text" onClick={props.ccOnClick}>Create Cost Center</button></div>
             <div className='hr'/>
             <a>
                 <SystemIcon
