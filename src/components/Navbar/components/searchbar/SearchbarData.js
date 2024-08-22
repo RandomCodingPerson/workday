@@ -51,5 +51,20 @@ export const SearchbarData = [
         path: "/",
         type: "Task"
     },
+    {
+        title: "Merit",
+        path: "/benefits",
+        type: "App"
+    },
+    {
+        title: "Expenses Hub",
+        path: "/pay",
+        type: "App"
+    },
+    {
+        title: "Travel Management",
+        path: "/absence",
+        type: "App"
+    }
     
 ];
