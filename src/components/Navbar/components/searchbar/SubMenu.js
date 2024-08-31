@@ -1,24 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
- 
-const SidebarLink = styled(Link)`
-    display: flex;
-    color: #000000;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    list-style: none;
-    height: 60px;
-    text-decoration: none;
-    font-size: 18px;
-
-
-    &:hover {
-        background: #f8f6f8;
-        cursor: pointer;
-    }
-`;
 
 
 const SidebarLabel = styled.span`
@@ -26,6 +8,21 @@ const SidebarLabel = styled.span`
 `;
 
 
+const SidebarLink = styled.link`
+    display: flex;
+    color: #000000;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 60px;
+    text-decoration: none;
+    font-size: 18px;
+
+    &:hover {
+        background: #f8f6f8;
+        cursor: pointer;
+    }
+`
 
 
 const SubMenu = ({ item }) => {

@@ -11,7 +11,10 @@ import SubMenu from "./SubMenu";
 import {SystemIcon} from '@workday/canvas-kit-react/icon';
 import {plusCircleIcon, textEditIcon} from '@workday/canvas-system-icons-web';
 import { IconContext } from "react-icons/lib";
-import './Sidebar.scss'
+import './Sidebar.scss';
+import { Draggable } from "react-drag-reorder";
+
+import {switchIcon} from '@workday/canvas-system-icons-web';
 
 
 const Nav = styled.div`
@@ -59,6 +62,30 @@ const Sidebar = () => {
     const showSidebar = () => setSidebar(!sidebar);
 
 
+    const [drag, setDrag] = useState(false);
+    const [started, setStarted] = useState(false);
+
+    const switchDrag = () => {
+
+        setStarted(true);
+        
+        if (drag) {
+            for (let i = 0; i < document.getElementsByClassName("grabbable").length; i++) {
+                let element = document.getElementsByClassName("grabbable")[i];
+                element.draggable = false;
+                element.firstChild.classList.remove("drag-sb");
+            }
+            
+        } else {
+            for (let i = 0; i < document.getElementsByClassName("grabbable").length; i++) {
+                let element = document.getElementsByClassName("grabbable")[i];
+                element.draggable = true;
+                element.firstChild.classList.add("drag-sb");
+            }
+        }
+        setDrag(!drag);
+    }
+
     return (
         <>
             <IconContext.Provider value={{ color: "#000000"}}>
@@ -95,17 +122,56 @@ const Sidebar = () => {
                             </div>
                         </div>
                         <hr style={{height: "1px", color: "gray"}}></hr>
-                        <div style={{marginLeft: "1.11vw", marginTop: "4.48vh", marginBottom: "4.8vh"}}>
+                        <div className='orderAndSwitch' style={{marginLeft: "1.11vw", marginRight: "1.11vw", marginTop: "4.48vh", marginBottom: "4.8vh"}}>
                             <p style={{color: "#9e9fa2", fontSize: "13px"}}>Your Saved Order</p>
-                        </div>
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <SubMenu
-                                    item={item}
-                                    key={index}
+                            <button onClick={() => {
+                                switchDrag()
+                            }}>
+                                <SystemIcon
+                                    className='switchIcon'
+                                    icon={switchIcon}
                                 />
-                            );
-                        })}
+                            </button>
+                        </div>
+                        
+                        {/* 
+                                
+                            Draggable Re-order
+                        
+                        */}
+                        
+
+                        {started ? (
+                            <Draggable>
+                                {SidebarData.map((item, index) => {
+                                    return (
+                                        <div className='drag-sb subMenuItem'>
+                                            <SubMenu
+                                                item={item}
+                                                key={index}
+                                            />
+                                        </div>
+                                    );
+                                })}
+                            </Draggable>
+                        ) : (
+                            <div>
+                                {SidebarData.map((item, index) => {
+                                    return (
+                                        <div className='subMenuItem'>
+                                            <SubMenu
+                                                item={item}
+                                                key={index}
+                                            />
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+
+                        {/* Draggable End
+                        */}
+
                         <div style={{position:"absolute", background: "white", bottom:"1.68vh", width: "-webkit-fill-available"}}>
                             <div style={{height: "2.5px", backgroundColor: "#f5f3f5"}}></div>
                             <div class="flex-container" style={{marginLeft: "4.77vw", fontSize: "14px", marginTop: "3.15vh"}}>

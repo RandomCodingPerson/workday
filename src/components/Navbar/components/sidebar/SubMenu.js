@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
  
 const SidebarLink = styled(Link)`
-    display: flex;
+    
+`;
+
+/*
+display: flex;
     color: #000000;
     justify-content: space-between;
     align-items: center;
@@ -18,8 +22,7 @@ const SidebarLink = styled(Link)`
         background: #f8f6f8;
         cursor: pointer;
     }
-`;
-
+        */
 
 const SidebarLabel = styled.span`
     margin-left: 16px;
