@@ -7,7 +7,7 @@ export const SearchbarData = [
         type: "App"
     },
     {
-        title: "Enter and approve time off",
+        title: "Inbox",
         path: "/inbox",
         type: "App"
     },

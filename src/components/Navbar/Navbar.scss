@@ -46,3 +46,19 @@
     left: 100vw;
 }
 
+.drag {
+    border: 1px dashed gray;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 1vw;
+    background: repeating-linear-gradient(
+        45deg,
+        #deeff5 0px,
+        #deeff5 2px,
+        transparent 2px,
+        transparent 9px
+    );
+    .draggable {
+        margin-bottom: 0;
+    }
+}
