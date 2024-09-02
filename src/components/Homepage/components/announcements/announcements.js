@@ -6,6 +6,8 @@ import Announcement from "./components/announcement";
 import {colors} from '@workday/canvas-kit-react/tokens';
 import {SystemIcon} from '@workday/canvas-kit-react/icon';
 import {chevronLeftSmallIcon, chevronRightSmallIcon} from '@workday/canvas-system-icons-web';
+import ZiplynePhoto from '../../../../img/ziplyne.jpg';
+import PayslipPhoto from '../../../../img/payslip.jpg';
 
 function Announcements(props) {
 
@@ -15,12 +17,12 @@ function Announcements(props) {
         {
             title: "Welcome to Ziplyne",
             announcement: "We are excited that you have joined the Ziplyne team! For your first steps, reach out to your manager for onboarding procedures. You can learn more about our company at our website!",
-            img: "https://demo.ziplyne.com/ZL-Login%20Background1.png"
+            img: ZiplynePhoto
         }, 
         {
             title: "Payslips are out",
             announcement: "Payslips were released this past wednesday. If you did not recieve yours, reach out to HR as soon as possible.",
-            img: "https://www.shutterstock.com/shutterstock/videos/1107964073/thumb/1.jpg?ip=x480"
+            img: PayslipPhoto
         }
     ]
 
